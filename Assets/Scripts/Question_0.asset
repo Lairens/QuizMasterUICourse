@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question_0
   m_EditorClassIdentifier: 
   question: This is the first question
+  answers:
+  - Answer1
+  - Answer2
+  - Answer3
+  - Answer4
+  correctAnswerIndex: 0
