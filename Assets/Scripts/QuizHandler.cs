@@ -15,7 +15,7 @@ public class QuizHandler : MonoBehaviour
     [Header("Answers")]
     [SerializeField] GameObject[] answerButtons;
     int correctAnswerIndex;
-    bool hasAnsweredEarly;
+    bool hasAnsweredEarly = true;
 
     [Header("Button Sprites")]
     [SerializeField] Sprite defaultAnswerSprite;
