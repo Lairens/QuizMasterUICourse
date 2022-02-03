@@ -1332,7 +1332,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionText: {fileID: 289131029}
-  questionSO: {fileID: 11400000, guid: 87767f022f869ac4db27ae84a4b4538a, type: 2}
+  questions:
+  - {fileID: 11400000, guid: 87767f022f869ac4db27ae84a4b4538a, type: 2}
+  - {fileID: 11400000, guid: 9f30fa4c1bb204e48b2d7e90f2366284, type: 2}
+  - {fileID: 11400000, guid: 8dd26a975984c42499c10b7472037013, type: 2}
+  - {fileID: 11400000, guid: c7b24a194e781f746ae91ad24ebe48e7, type: 2}
+  - {fileID: 11400000, guid: a5f077e55e54b524db0d381e119f7be1, type: 2}
   answerButtons:
   - {fileID: 950980583}
   - {fileID: 373498471}

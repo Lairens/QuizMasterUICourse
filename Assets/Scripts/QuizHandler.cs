@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
+using Random = UnityEngine.Random;
 
 public class QuizHandler : MonoBehaviour
 {
     [Header("Questions")]
     [SerializeField] TextMeshProUGUI questionText;
+    [SerializeField] List<QuestionSO> questions = new List<QuestionSO>();
     QuestionSO currentQuestionSO;
 
     [Header("Answers")]
@@ -27,7 +28,6 @@ public class QuizHandler : MonoBehaviour
     void Start()
     {
         timer = FindObjectOfType<Timer>();
-        GetNextQuestion();
     }
 
     private void Update()
@@ -50,9 +50,28 @@ public class QuizHandler : MonoBehaviour
 
     void GetNextQuestion()
     {
-        SetButtonState(true);
-        SetDefaultButtonSprites();
-        DisplayQuestion();
+        if(questions.Count > 0)
+        {
+            GetRandomQuestion();
+            DisplayQuestion();
+            SetButtonState(true);
+            SetDefaultButtonSprites();
+        }
+        else
+        {
+            //Print the End Screen
+        }
+    }
+
+    void GetRandomQuestion()
+    {
+        int index = Random.Range(0, questions.Count);
+        currentQuestionSO = questions[index];
+
+        if(questions.Contains(currentQuestionSO))
+        {
+            questions.Remove(currentQuestionSO);
+        }
     }
 
     #endregion
